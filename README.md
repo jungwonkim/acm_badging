@@ -1,5 +1,5 @@
 # acm_badging
-This guide shows you how to include the ACM Artifact Evaluation badges to your paper.
+This guide shows you how to include the ACM Artifact Evaluation badges in your paper.
 
 ## Get the sample code and vector images of the ACM badges.
     $ git clone https://github.com/jungwonkim/acm_badging.git
