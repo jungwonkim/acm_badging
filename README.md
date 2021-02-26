@@ -6,12 +6,14 @@ This guide shows you how to include the ACM Artifact Evaluation badges in your p
     $ cd acm_badging
     $ make
 
-### Step 1. Include the TikZ package.
+### Step 1. Include the TikZ and Background packages.
     \usepackage{tikz}
+    \usepackage[pages=some]{background}
 
 ### Step 2. Copy the following LaTeX code at right after \maketitle in your main LaTeX source file.
     \maketitle
 
+    \backgroundsetup{opacity=1, scale=1, angle=0, contents={
     \begin{tikzpicture}[remember picture, overlay]
     \node[anchor=north east, inner xsep=50pt, inner ysep=10pt] at (current page.north east) {
     \href{https://www.acm.org/publications/policies/artifact-review-and-badging-current}{
@@ -22,10 +24,13 @@ This guide shows you how to include the ACM Artifact Evaluation badges in your p
     \includegraphics[width=50pt]{results_replicated_v1.1.pdf}
     }};
     \end{tikzpicture}
+    }}
+    \BgThispage
 
 ### Step 3. Make comments in \includegraphcs not for your badges. If your paper has Available and Reproduced badges. Your LaTeX code looks like:
     \maketitle
 
+    \backgroundsetup{opacity=1, scale=1, angle=0, contents={
     \begin{tikzpicture}[remember picture, overlay]
     \node[anchor=north east, inner xsep=50pt, inner ysep=10pt] at (current page.north east) {
     \href{https://www.acm.org/publications/policies/artifact-review-and-badging-current}{
@@ -36,5 +41,7 @@ This guide shows you how to include the ACM Artifact Evaluation badges in your p
     %\includegraphics[width=50pt]{results_replicated_v1.1.pdf}
     }};
     \end{tikzpicture}
+    }}
+    \BgThispage
     
 ### Done.

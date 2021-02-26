@@ -1,6 +1,7 @@
 \documentclass[sigplan]{acmart}
 
 \usepackage{tikz}
+\usepackage[pages=some]{background}
 
 \setcopyright{none}
 
@@ -33,6 +34,7 @@ This article shows you how to include the ACM Artifact Evaluation badges in your
 
 \maketitle
 
+\backgroundsetup{opacity=1, scale=1, angle=0, contents={
 \begin{tikzpicture}[remember picture, overlay]
 \node[anchor=north east, inner xsep=50pt, inner ysep=10pt] at (current page.north east) {
 \href{https://www.acm.org/publications/policies/artifact-review-and-badging-current}{
@@ -43,6 +45,8 @@ This article shows you how to include the ACM Artifact Evaluation badges in your
 \includegraphics[width=50pt]{results_replicated_v1.1.pdf}
 }};
 \end{tikzpicture}
+}}
+\BgThispage
 
 \section{Instructions}
 The badges are placed on the top right corner of the paper, side-by-side. The “most important” badge is positioned rightmost, with the second most important to the left of it, and so on. The badges are listed from least to most important on the badging page~\cite{ACM} (so, pink/Functional is least important, light blue/Replicated is most important).
